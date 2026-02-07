@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VELOURA - Premium Fashion Accessories</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-custom">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand" href="#home">
+                <div class="logo-container">
+                    <img src="images/logo.png" alt="VELOURA Logo" class="navbar-logo">
+                </div>
+                <span class="brand-text">VELOURA</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-3 align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <button class="btn btn-cart" id="cart-btn">
+                            <i class="fas fa-shopping-bag"></i>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </button>
+                    </li>
+                    <li class="nav-item"><a class="nav-link btn-shop" href="#account">My Account</a></li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+        </div>
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-6 text-start">
+                    <h1 class="hero-title">Welcome to <span class="brand-accent">VELOURA</span></h1>
+                    <p class="hero-subtitle">Find Accessories that match your style</p>
+                    <p class="hero-description">Discover our exclusive collection of luxury jewelry, handbags, scarves, and accessories designed to transform your everyday look into a statement.</p>
+                    <div class="cta-buttons mt-5">
+                        <button class="btn btn-primary btn-lg btn-explore" onclick="handleExplore()">Explore Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <div class="hero-logo-container">
+                        <img src="images/model.png" alt="VELOURA Logo" class="hero-logo-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center mb-5">Why Choose VELOURA?</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h5>Luxury Quality</h5>
+                        <p>Every VELOURA accessory is crafted from the finest, premium materials, ensuring a luxurious feel that elevates your style with elegance.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h5>Trusted Sellers</h5>
+                        <p>Shop confidently knowing our curated sellers are verified and trusted, providing you with genuine fashion pieces and exceptional service.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-undo"></i>
+                        </div>
+                        <h5>Authentic Guarantee</h5>
+                        <p>Each product comes with a certificate of authenticity, so you can enjoy your accessories with the assurance that they are 100% original.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center mb-5">Featured Collections</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Gold+Necklace" alt="Product" class="img-fluid">
+                            <span class="badge-new">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h5>Gold Chain Necklace</h5>
+                            <p class="product-description">Elegant 18K gold plated timeless design</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">₱149.99</span>
+                                <button class="btn-add-cart" onclick="handleAddCart('Gold Chain Necklace')">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Designer+Handbag" alt="Product" class="img-fluid">
+                            <span class="badge-sale">-25%</span>
+                        </div>
+                        <div class="product-info">
+                            <h5>Luxury Leather Handbag</h5>
+                            <p class="product-description">Italian leather crafted elegance</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">₱299.99</span>
+                                <button class="btn-add-cart" onclick="handleAddCart('Luxury Leather Handbag')">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Diamond+Earrings" alt="Product" class="img-fluid">
+                            <span class="badge-new">New</span>
+                        </div>
+                        <div class="product-info">
+                            <h5>Diamond Stud Earrings</h5>
+                            <p class="product-description">Premium cut cubic zirconia sparkle</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">₱199.99</span>
+                                <button class="btn-add-cart" onclick="handleAddCart('Diamond Stud Earrings')">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="https://via.placeholder.com/300x300?text=Silk+Scarf" alt="Product" class="img-fluid">
+                            <span class="badge-sale">-30%</span>
+                        </div>
+                        <div class="product-info">
+                            <h5>Premium Silk Scarf</h5>
+                            <p class="product-description">Luxurious 100% mulberry silk</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="product-price">₱89.99</span>
+                                <button class="btn-add-cart" onclick="handleAddCart('Premium Silk Scarf')">
+                                    <i class="fas fa-shopping-cart"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5 bg-light">
+        <div class="container py-5">
+            <div class="row align-items-center gap-5">
+                <div class="col-lg-6">
+                    <h2 class="section-title">About VELOURA</h2>
+                    <p class="lead">We are dedicated to curating the finest fashion accessories that embody timeless elegance and uncompromising quality. Every piece is carefully selected from trusted global sellers to ensure authenticity and superior craftsmanship.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> Since 2025, we've been sourcing luxury accessories globally</li>
+                        <li><i class="fas fa-check-circle"></i> Trusted by fashion enthusiasts and style icons worldwide</li>
+                        <li><i class="fas fa-check-circle"></i> Expert stylists provide personalized recommendations</li>
+                        <li><i class="fas fa-check-circle"></i> Committed to ethical and sustainable fashion practices</li>
+                    </ul>
+                </div>
+        
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights & Collections (replaces Newsletter) -->
+    <section class="highlights-section py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center mb-5">Shop Highlights</h2>
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <h5>Free Shipping</h5>
+                        <p>Enjoy free shipping on orders over ₱2,500 across the Philippines.</p>
+                        <a href="#products" class="btn btn-explore mt-3">Shop Collections</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-gift"></i>
+                        </div>
+                        <h5>Gift Wrap & Cards</h5>
+                        <p>Add premium gift wrapping and a personalized card at checkout.</p>
+                        <a href="#about" class="btn btn-outline-light mt-3">Learn More</a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card text-center">
+                        <div class="feature-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h5>Member Rewards</h5>
+                        <p>Earn points on every purchase and unlock exclusive offers.</p>
+                        <a href="#contact" class="btn btn-explore mt-3">Join Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container py-5">
+            <h2 class="section-title text-center mb-5">Get in Touch</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h5>Location</h5>
+                        <p>0936 Purok 7, Pinagkawitan, Lipa City, Batangas</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <h5>Phone</h5>
+                        <p>0994 400 9180</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h5>Email</h5>
+                        <p>velouraofficial@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container py-5">
+            <div class="row g-4 mb-5">
+                <div class="col-md-3">
+                    <h5 class="mb-4">VELOURA</h5>
+                    <p>Premium fashion accessories</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <h6>Shop</h6>
+                    <ul class="footer-links">
+                        <li><a href="#products">Jewelry</a></li>
+                        <li><a href="#products">Handbags</a></li>
+                        <li><a href="#products">Scarves</a></li>
+                        <li><a href="#products">Accessories</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Customer Care</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6>Legal</h6>
+                    <ul class="footer-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-top pt-4 text-center">
+                <p>&copy; 2024 VELOURA Fashion Accessories. All rights reserved. | Designed with <i class="fas fa-heart"></i> for style</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>
